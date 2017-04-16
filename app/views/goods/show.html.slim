@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @good.name
+p
+  strong Price:
+  = @good.price
+p
+  strong Image url:
+  = @good.image_url
+
+= link_to 'Edit', edit_good_path(@good)
+'  |
+= link_to 'Back', goods_path

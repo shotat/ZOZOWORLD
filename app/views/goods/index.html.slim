@@ -1,0 +1,25 @@
+h1 Listing goods
+
+table
+  thead
+    tr
+      th Name
+      th Price
+      th Image url
+      th
+      th
+      th
+
+  tbody
+    - @goods.each do |good|
+      tr
+        td = good.name
+        td = good.price
+        td = good.image_url
+        td = link_to 'Show', good
+        td = link_to 'Edit', edit_good_path(good)
+        td = link_to 'Destroy', good, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Good', new_good_path
